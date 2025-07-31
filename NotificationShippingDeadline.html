@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StrongBody Trade Assurance - Shipping Reminder</title>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Base Styles & Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:'Plus Jakarta Sans',sans-serif;
+        background-color: #f5f7fa; /* Light grey background for a clean look */
+        color: #333333;
+        line-height: 1.6;
+        padding: 20px 0;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff; /* A neutral blue for links */
+        font-weight: 500;
+      }
+
+      /* Email Container */
+      .email-container {
+        max-width: 600px; /* Slightly narrower for a more focused feel */
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 12px; /* Softer rounded corners */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+        overflow: hidden;
+        border: 1px solid #e0e6ed; /* Subtle border */
+      }
+
+      /* Header Section */
+      .header {
+        background-color: #ffff; /* StrongBody Red */
+        padding: 25px 30px;
+        text-align: center;
+      }
+
+      /* .logo {
+            display: inline-block;
+        }
+        
+        .logo h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        } */
+
+      /* Service Badge - Moved to Content for better visibility */
+
+      /* Main Content Area */
+      .content {
+        padding: 30px;
+      }
+
+      .service-badge-top {
+        display: block;
+        background-color: #e6f7ff; /* Light blue background */
+        color: #007bff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto 25px auto; /* Centered with bottom margin */
+        border: 1px solid #cceeff;
+      }
+
+      /* Alert Banner */
+      .alert-banner {
+        background-color: #fffbe6; /* Softer yellow */
+        border: 1px solid #ffe58f; /* Matching border */
+        border-radius: 8px;
+        padding: 18px 20px;
+        margin-bottom: 25px;
+        display: flex; /* Use flex for icon and text */
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .alert-icon {
+        font-size: 24px;
+        color: #d46b08; /* Darker yellow/orange for icon */
+        line-height: 1;
+      }
+
+      .alert-text-wrapper {
+        flex-grow: 1;
+      }
+
+      .alert-title {
+        font-size: 17px;
+        font-weight: 700;
+        color: #d46b08;
+        margin-bottom: 5px;
+      }
+
+      .alert-subtitle {
+        font-size: 14px;
+        color: #d46b08;
+        font-weight: 500;
+      }
+
+      .days-left {
+        background-color: #db1f26;
+        color: white;
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 13px;
+        display: inline-block; /* Ensure it stays in line */
+        margin-left: 10px;
+        white-space: nowrap;
+      }
+
+      /* Greeting & Message Content */
+      .greeting {
+        font-size: 15px;
+        color: #555555;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+
+      .message-content {
+        background: #fdfdff; /* Very light background */
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        border: 1px solid #e0e6ed; /* Subtle border */
+      }
+
+      .message-content p {
+        margin-bottom: 15px;
+        color: #444444;
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .message-content a {
+        color: #007bff;
+        text-decoration: underline; /* Underline for standard link appearance */
+        font-weight: 600;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .message-content a:hover {
+        color: #0056b3;
+      }
+
+      /* Consequences List */
+      .consequences-list {
+        background-color: #fff0f0; /* Softer red */
+        border-radius: 8px;
+        padding: 18px;
+        margin: 15px 0;
+        border: 1px solid #ffcccb;
+      }
+
+      .consequences-list h4 {
+        color: #e03131; /* Darker red */
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      .consequences-list ol {
+        padding-left: 20px;
+        color: #6a0000;
+        font-size: 14px;
+      }
+
+      .consequences-list li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+
+      /* Call to Action Button */
+      .cta-section {
+        text-align: center;
+        margin: 30px 0 20px 0;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: #db1f26; /* StrongBody Red */
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 8px; /* Softer radius */
+        font-weight: 600;
+        font-size: 16px;
+        box-shadow: 0 6px 20px rgba(219, 31, 38, 0.25);
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cta-button:hover {
+        background-color: #a31621; /* Slightly darker on hover */
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(219, 31, 38, 0.35);
+      }
+
+      /* Order Details Card */
+      .order-card {
+        background: #ffffff;
+        border: 1px solid #e0e6ed; /* Subtle border */
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 25px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Very light shadow */
+      }
+
+      .order-header {
+        background-color: #f7f9fc; /* Light background for header */
+        border-bottom: 1px solid #e0e6ed;
+        color: #333333;
+        padding: 18px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+      }
+
+      .order-number {
+        font-weight: 600;
+      }
+
+      .view-details-link {
+        color: #007bff;
+        font-weight: 500;
+        font-size: 13px;
+      }
+
+      /* Order Table */
+      .order-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .table-header {
+        background-color: #fcfdfe; /* Even lighter header */
+        font-weight: 600;
+        color: #555555;
+        font-size: 13px;
+      }
+
+      .table-header th {
+        padding: 15px 25px;
+        text-align: left;
+        border-bottom: 1px solid #e0e6ed;
+      }
+
+      .table-header th:last-child {
+        text-align: right;
+      }
+
+      .table-header th:nth-child(2), /* Quantity */
+        .table-header th:nth-child(3) {
+        /* Unit Price */
+        text-align: center; /* Center align these */
+      }
+
+      .table-row td {
+        padding: 18px 25px;
+        border-bottom: 1px solid #f0f3f7; /* Very light border */
+        vertical-align: middle; /* Align content vertically */
+        font-size: 14px;
+        color: #444444;
+      }
+
+      .table-row td:last-child {
+        text-align: right;
+      }
+
+      .table-row td:nth-child(2), /* Quantity */
+        .table-row td:nth-child(3) {
+        /* Unit Price */
+        text-align: center; /* Center align these */
+      }
+
+      .product-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .product-image {
+        width: 50px; /* Slightly smaller image */
+        height: 50px;
+        border-radius: 6px; /* Softer corners */
+        object-fit: cover;
+        border: 1px solid #e0e6ed;
+        flex-shrink: 0;
+      }
+
+      .product-name {
+        font-weight: 500;
+        color: #333333;
+        line-height: 1.3;
+      }
+
+      .product-name small {
+        display: block;
+        margin-top: 3px;
+        color: #777777;
+        font-size: 0.8em;
+      }
+
+      .order-total {
+        background: #f7f9fc;
+        padding: 18px 25px;
+        text-align: right;
+        font-weight: 600;
+        font-size: 16px;
+        color: #333333;
+        border-top: 1px solid #e0e6ed;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #eef2f6; /* Light grey footer */
+        color: #777777;
+        padding: 25px 30px;
+        font-size: 11px;
+        line-height: 1.5;
+        text-align: center;
+        border-top: 1px solid #e0e6ed;
+      }
+
+      .footer a {
+        color: #007bff;
+        text-decoration: underline;
+      }
+
+      .footer a:hover {
+        color: #0056b3;
+      }
+
+      .company-info {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #d4dae0;
+      }
+
+      .company-info p {
+        margin-bottom: 4px;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 620px) {
+        .email-container {
+          margin: 0;
+          border-radius: 0;
+          box-shadow: none;
+          border: none;
+        }
+
+        .header {
+          padding: 20px;
+        }
+
+        .logo h1 {
+          font-size: 24px;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .service-badge-top {
+          margin-bottom: 20px;
+        }
+
+        .alert-banner {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 15px;
+          gap: 10px;
+        }
+
+        .alert-title {
+          font-size: 16px;
+        }
+
+        .days-left {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+
+        .greeting,
+        .message-content p,
+        .consequences-list ol li,
+        .order-header,
+        .table-header th,
+        .table-row td,
+        .order-total,
+        .footer {
+          font-size: 13px;
+        }
+
+        .message-content {
+          padding: 15px;
+        }
+
+        .consequences-list {
+          padding: 15px;
+        }
+
+        .cta-button {
+          padding: 12px 25px;
+          font-size: 15px;
+        }
+
+        .order-header {
+          flex-direction: column;
+          align-items: flex-start; /* Still align left for order details */
+          gap: 5px;
+          padding: 15px 20px;
+        }
+        .order-header .view-details-link {
+          text-align: left;
+        }
+
+        .table-header th,
+        .table-row td {
+          padding: 12px 15px;
+          white-space: normal; /* Allow text to wrap */
+        }
+
+        .table-header th:last-child,
+        .table-row td:last-child {
+          text-align: right;
+        }
+
+        .table-header th:nth-child(2),
+        .table-row td:nth-child(2),
+        .table-header th:nth-child(3),
+        .table-row td:nth-child(3) {
+          text-align: center;
+        }
+
+        .product-info {
+          flex-direction: row; /* Keep image and text side-by-side if space allows */
+          align-items: center;
+          gap: 10px;
+        }
+
+        .product-name small {
+          text-align: left; /* Adjust small text alignment */
+        }
+
+        .order-total {
+          padding: 15px 20px;
+        }
+
+        .footer {
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .product-info {
+          flex-direction: column; /* Stack image and text if very narrow */
+          text-align: center;
+        }
+        .product-name small {
+          text-align: center;
+        }
+      }
+
+      /* Inline styles for email client compatibility */
+      /* It's good practice to inline critical styles if possible, but for a modern design, external CSS usually works well for common clients */
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <div class="logo">
+          <img src="./icon email/logoMain.png" alt="StrongBody" width="140" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="service-badge-top">Trade Assurance Service</div>
+
+        <div class="alert-banner">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-text-wrapper">
+            <div class="alert-title">
+              Shipping deadline approaching
+              <span class="days-left">3 days left</span>
+            </div>
+            <div class="alert-subtitle">
+              Trade Assurance Order No. {{order id}} - Action required
+            </div>
+          </div>
+        </div>
+
+        <div class="greeting">Dear {{seller name}},</div>
+
+        <div class="message-content">
+          <p>
+            There are <strong>3 days left</strong> before the shipping deadline
+            for your Trade Assurance Order No. <strong>{{order id}}</strong> to
+            buyer <strong>{{buyer name}}</strong>. Please ship your products and
+            provide proof of shipment by updating the order status.
+          </p>
+
+          <p>
+            <a href="#">Click here</a> to learn how to change the order status
+            and provide shipping documentation.
+          </p>
+
+          <div class="consequences-list">
+            <h4>
+              ⚠️ Important: Shipping delays may cause the following
+              consequences:
+            </h4>
+            <ol>
+              <li>
+                <strong>Drop in supplier star ranking:</strong> Star ranking is
+                based on online transaction fulfillment scores. A delay in
+                shipping will negatively impact your transaction score.
+              </li>
+              <li>
+                <strong>Reduction in supplier score:</strong> StrongBody
+                evaluates sellers through a comprehensive scoring system. If any
+                buyer files a dispute due to shipping delays, your score will be
+                deducted by 1-4 points. Your StrongBody account will be
+                terminated if total deductions reach 48 points.
+              </li>
+            </ol>
+          </div>
+
+          <p>
+            <strong>Note:</strong> If you cannot meet the agreed deadline,
+            please contact the buyer immediately to negotiate the shipping
+            timeline. You may refer to the
+            <a href="#">StrongBody Transaction Dispute Rules</a> for more
+            information.
+          </p>
+        </div>
+
+        <div class="cta-section">
+          <a href="#" class="cta-button">View Order Details</a>
+        </div>
+
+        <div class="order-card">
+          <div class="order-header">
+            <div class="order-number">Order Number: {{order id}}</div>
+            <a href="#" class="view-details-link">View Full Details →</a>
+          </div>
+
+          <table class="order-table" role="presentation">
+            <thead>
+              <tr class="table-header">
+                <th>Product Name</th>
+                <th style="text-align: center">Qty</th>
+                <th style="text-align: center">Unit Price</th>
+                <th style="text-align: right">Total Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-row">
+                <td>
+                  <div class="product-info">
+                    <img src="" alt="Product image" class="product-image" />
+                    <div class="product-name">
+                      {{product}}<br />
+                      <!-- <small>(Bulk packaging)</small> -->
+                    </div>
+                  </div>
+                </td>
+                <td>{{Quantity}}</td>
+                <td>USD {{unit price}}</td>
+                <td>USD {{total price}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="order-total">Order Total: USD {{total}}</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          Read our <a href="#">Privacy Policy</a> and
+          <a href="#">Terms of Use</a>
+        </p>
+
+        <div class="company-info">
+          <span style="color: rgb(122, 125, 133)">
+            This email was sent to you by StrongBody SG PTE, LTD.<br />
+            You are receiving this email because you signed up for
+            StrongBody.ai<br />
+            If you wish to unsubscribe from all future emails, please click
+            <a
+              href=""
+              style="color: #db1f26; text-decoration: none; font-size: 13px"
+              target="_blank"
+              >Here</a
+            >.<br /><br />
+            105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore
+            <br />
+            StrongBody wellness marketplace, now in Multi Me - your trusted
+            super app for health and connections
+          </span>
+        </div>
+        <p style="margin-top: 15px">
+          &copy; 2025 StrongBody. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
