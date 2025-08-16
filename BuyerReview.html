@@ -1,78 +1,154 @@
 <div>
-  <div style="width:760px;border:1px solid #dedede;background:#f0f0f0;padding:40px 0;margin:0 auto;font-family:Arial,Helvetica,sans-senif,Microsoft YaHei"> 
-   <table align="center" width="640"> 
-    <tbody>
-     <tr> 
-      <td height="30" width="175"> <a><img src="./icon email/logoMain.png" width="160" height="32" border="0px" class="CToWUd" data-bit="iit"></a> </td> 
-      <td width="10" height="30" style="padding:0"> 
-       <div style="border-left:1px solid #dcdcdc;width:1px;height:20px"></div> </td> 
-      <td width="460" height="30"> <span style="font-size:16px"></span> </td> 
-     </tr> 
-     <tr> 
-      <td colspan="3" height="15"></td> 
-     </tr> 
-    </tbody>
-   </table> 
-   <table align="center" width="640" style="background:#fff;border:1px solid #cdcdcd"> 
-    <tbody>
-     <tr> 
-      <td height="8"></td> 
-     </tr> 
-     <tr> 
-      <td style="padding:12px 20px"> 
-       <table align="center" width="600"> 
-        <tbody>
-         <tr> 
-          <td style="font-size:20px;color:#333333;line-height:28px"> Your buyer wrote a review of the order {{number order}} </td> 
-         </tr> 
-         <tr> 
-          <td height="10"></td> 
-         </tr> 
-         <tr> 
-          <td style="font-size:16px;color:#666666;line-height:20px"> Dear {{name seller}}, </td> 
-         </tr> 
-         <tr> 
-          <td height="10"></td> 
-         </tr> 
-         <tr> 
-          <td style="font-size:14px;color:#666666;line-height:20px"> Your buyer {{name buyer}} has written a review of the  order (No. {{number order}}): </td> 
-         </tr> 
-         <tr> 
-          <td style="font-size:14px;color:#666666;line-height:20px">{{Review content}}</td> 
-         </tr> 
-         <tr> 
-          <td height="10"></td> 
-         </tr> 
-         <tr> 
-          <td style="font-size:14px;color:#666666;line-height:20px"> You can view or reply to your buyer's review on review management page. Please note that you have an opportunity to reply to the review within 30 days. </td> 
-         </tr> 
-         <tr> 
-          <td height="10"></td> 
-         </tr> 
-         <tr> 
-          <td style="font-size:14px;color:#666666;line-height:20px"> Wishing you the very best of business </td> 
-         </tr> 
-         <tr> 
-          <td style="font-size:14px;color:#666666;line-height:20px"> Strongbody.ai </td> 
-         </tr> 
-         <tr> 
-          <td height="5"> </td> 
-         </tr> 
-         <tr> 
-          <td height="15"><a style="display:inline-block;width:200px;margin-top:8px;font-size:16px;text-decoration:none;border-radius:3px;text-align:center;padding:10px 0;color:#fff;background:#DB1F26" href="" target="_blank">View Order Reviews</a></td> 
-         </tr> 
-        </tbody>
-       </table> </td> 
-     </tr> 
-    </tbody>
-   </table> 
-    
-   <table align="center" width="640"> 
-    <tbody>
-     <tr> 
-      <td height="20"></td> 
-     </tr> 
-     <!-- <tr> 
+  <div
+    style="
+      width: 760px;
+      border: 1px solid #dedede;
+      background: #f0f0f0;
+      padding: 40px 0;
+      margin: 0 auto;
+      font-family: Arial, Helvetica, sans-senif, Microsoft YaHei;
+    "
+  >
+    <table align="center" width="640">
+      <tbody>
+        <tr>
+          <td height="30" width="175">
+            <a
+              ><img
+                src="./icon email/logoMain.png"
+                width="160"
+                height="32"
+                border="0px"
+                class="CToWUd"
+                data-bit="iit"
+            /></a>
+          </td>
+          <td width="10" height="30" style="padding: 0">
+            <div
+              style="border-left: 1px solid #dcdcdc; width: 1px; height: 20px"
+            ></div>
+          </td>
+          <td width="460" height="30"><span style="font-size: 16px"></span></td>
+        </tr>
+        <tr>
+          <td colspan="3" height="15"></td>
+        </tr>
+      </tbody>
+    </table>
+    <table
+      align="center"
+      width="640"
+      style="background: #fff; border: 1px solid #cdcdcd"
+    >
+      <tbody>
+        <tr>
+          <td height="8"></td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 20px">
+            <table align="center" width="600">
+              <tbody>
+                <tr>
+                  <td
+                    style="font-size: 20px; color: #333333; line-height: 28px"
+                  >
+                    Your buyer wrote a review of the order {{number order}}
+                  </td>
+                </tr>
+                <tr>
+                  <td height="10"></td>
+                </tr>
+                <tr>
+                  <td
+                    style="font-size: 16px; color: #666666; line-height: 20px"
+                  >
+                    Dear {{name seller}},
+                  </td>
+                </tr>
+                <tr>
+                  <td height="10"></td>
+                </tr>
+                <tr>
+                  <td
+                    style="font-size: 14px; color: #666666; line-height: 20px"
+                  >
+                    Your buyer {{name buyer}} has written a review of the order
+                    (No. {{number order}}):
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="font-size: 14px; color: #666666; line-height: 20px"
+                  >
+                    {{Review content}}
+                  </td>
+                </tr>
+                <tr>
+                  <td height="10"></td>
+                </tr>
+                <tr>
+                  <td
+                    style="font-size: 14px; color: #666666; line-height: 20px"
+                  >
+                    You can view or reply to your buyer's review on review
+                    management page. Please note that you have an opportunity to
+                    reply to the review within 30 days.
+                  </td>
+                </tr>
+                <tr>
+                  <td height="10"></td>
+                </tr>
+                <tr>
+                  <td
+                    style="font-size: 14px; color: #666666; line-height: 20px"
+                  >
+                    Wishing you the very best of business
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="font-size: 14px; color: #666666; line-height: 20px"
+                  >
+                    Strongbody.ai
+                  </td>
+                </tr>
+                <tr>
+                  <td height="5"></td>
+                </tr>
+                <tr>
+                  <td height="15">
+                    <a
+                      style="
+                        display: inline-block;
+                        width: 200px;
+                        margin-top: 8px;
+                        font-size: 16px;
+                        text-decoration: none;
+                        border-radius: 3px;
+                        text-align: center;
+                        padding: 10px 0;
+                        color: #fff;
+                        background: #db1f26;
+                      "
+                      href=""
+                      target="_blank"
+                      >View Order Reviews</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table align="center" width="640">
+      <tbody>
+        <tr>
+          <td height="20"></td>
+        </tr>
+        <!-- <tr> 
       <td> 
        <div style="font-size:12px"> 
         <p style="color:#aaa;line-height:18px;margin:0 0 4px"> Read our <a href="http://news.alibaba.com/article/detail/help/100453303-1-privacy-policy.html?url_type=footer_privacy&amp;mt=mail&amp;crm_mtn_tracelog_log_id=5000000004146236739&amp;crm_mtn_tracelog_task_id=e14530ce-4329-494b-924f-1b07af05e72f&amp;crm_mtn_tracelog_template=2000381046&amp;as_token=8kXZtE6o8CbESNDqpGxyYwa1WxKhVHEnPIayCUjYbiws7dvf&amp;to=daotham30.3%40gmail.com&amp;from=reviewfeedback%40notice.alibaba.com" style="color:#999" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://news.alibaba.com/article/detail/help/100453303-1-privacy-policy.html?url_type%3Dfooter_privacy%26mt%3Dmail%26crm_mtn_tracelog_log_id%3D5000000004146236739%26crm_mtn_tracelog_task_id%3De14530ce-4329-494b-924f-1b07af05e72f%26crm_mtn_tracelog_template%3D2000381046%26as_token%3D8kXZtE6o8CbESNDqpGxyYwa1WxKhVHEnPIayCUjYbiws7dvf%26to%3Ddaotham30.3%2540gmail.com%26from%3Dreviewfeedback%2540notice.alibaba.com&amp;source=gmail&amp;ust=1754011308186000&amp;usg=AOvVaw0cz6RVfaU_e0Jvo38-5b7b"> Privacy Policy </a> and <a href="http://news.alibaba.com/article/detail/help/100453293-1-terms-use.html?url_type=footer_term&amp;mt=mail&amp;crm_mtn_tracelog_log_id=5000000004146236739&amp;crm_mtn_tracelog_task_id=e14530ce-4329-494b-924f-1b07af05e72f&amp;crm_mtn_tracelog_template=2000381046&amp;as_token=8kXZtE6o8CbESNDqpGxyYwa1WxKhVHEnPIayCUjYbiws7dvf&amp;to=daotham30.3%40gmail.com&amp;from=reviewfeedback%40notice.alibaba.com" style="color:#999" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://news.alibaba.com/article/detail/help/100453293-1-terms-use.html?url_type%3Dfooter_term%26mt%3Dmail%26crm_mtn_tracelog_log_id%3D5000000004146236739%26crm_mtn_tracelog_task_id%3De14530ce-4329-494b-924f-1b07af05e72f%26crm_mtn_tracelog_template%3D2000381046%26as_token%3D8kXZtE6o8CbESNDqpGxyYwa1WxKhVHEnPIayCUjYbiws7dvf%26to%3Ddaotham30.3%2540gmail.com%26from%3Dreviewfeedback%2540notice.alibaba.com&amp;source=gmail&amp;ust=1754011308186000&amp;usg=AOvVaw2_CANF-k1tT-bzSQe20lOk"> Terms of Use </a> </p> 
@@ -81,9 +157,25 @@
         <p style="color:#aaa;line-height:18px;margin:0 0 4px"> Tel: (+852) 2215-5100 </p> 
        </div> </td> 
      </tr>  -->
-    </tbody>
-   </table> 
+      </tbody>
+    </table>
   </div>
-  <img style="display:none;color:#fff" width="0" height="0" src="https://ci3.googleusercontent.com/meips/ADKq_NYAclPKvNqLqKZY7mBeR4VGmgy_x4yIjPvrfER27LIHQ3YED1Xbn2fdEGkf1dnianuyCw01FhphomZ-ENuTb7T3wxmOhSvN6BJSi3RBeqRzhqCOZeIbsLoB0jKLacKaqnV3lQvdMLSrcTUANoo_F_kuUC3uYHAKQcky29zdW0rqhgN86gzs7TCNAoQlQavlZkHmH_LhKggSeWLEWL2ROr1VVvxxyYB97_FM8Q=s0-d-e1-ft#http://stat.alibaba.com/mail_callback.html?crm_mtn_tracelog_log_id=5000000004146236739&amp;crm_mtn_tracelog_task_id=e14530ce-4329-494b-924f-1b07af05e72f" class="CToWUd" data-bit="iit">
-  <img style="display:none;color:#fff" width="0" height="0" src="https://ci3.googleusercontent.com/meips/ADKq_NaPBoA4KWDGUSxeeIqowGYFmRI9MFO6QDu6ywF7BTb53NBnwtQLckeNG38EzeAls_45nDzBUpmjoTKl7RO7Cxls3eGDSfIyaFfoj2jTK5DSHSGp0hnZNNKeAvzbXbh4Qvavr227S4gK6SHKpYmP_IAHlXmiavXmQ51InXWW2FcY7VNmgvRzbwmXjkpSknTc5Hh4UQvWaoKb1E-g2RYTqTS38-cC3diK2Y7VMQekFmn900HEQtAKefNWfkRDq-TU-7gO2CzDoILkhSJK0-OoiCU4y40T9WOJHhhHrJ9DyAD2Fw-lCs_-4L03MBravYf-pFshfvaWQ-mT4yyki_u7FVhFcGcrPQ2oqo6Q-nIv=s0-d-e1-ft#http://gm.mmstat.com/btob.10?crm_mtn_tracelog_log_id=5000000004146236739&amp;crm_mtn_tracelog_task_id=e14530ce-4329-494b-924f-1b07af05e72f&amp;from=reviewfeedback@notice.alibaba.com&amp;to=daotham30.3@gmail.com&amp;from_sys=null&amp;biz_type=null&amp;template=2000381046" class="CToWUd" data-bit="iit"><div class="yj6qo"></div><div class="adL">
- </div></div>
+  <img
+    style="display: none; color: #fff"
+    width="0"
+    height="0"
+    src="https://ci3.googleusercontent.com/meips/ADKq_NYAclPKvNqLqKZY7mBeR4VGmgy_x4yIjPvrfER27LIHQ3YED1Xbn2fdEGkf1dnianuyCw01FhphomZ-ENuTb7T3wxmOhSvN6BJSi3RBeqRzhqCOZeIbsLoB0jKLacKaqnV3lQvdMLSrcTUANoo_F_kuUC3uYHAKQcky29zdW0rqhgN86gzs7TCNAoQlQavlZkHmH_LhKggSeWLEWL2ROr1VVvxxyYB97_FM8Q=s0-d-e1-ft#http://stat.alibaba.com/mail_callback.html?crm_mtn_tracelog_log_id=5000000004146236739&amp;crm_mtn_tracelog_task_id=e14530ce-4329-494b-924f-1b07af05e72f"
+    class="CToWUd"
+    data-bit="iit"
+  />
+  <img
+    style="display: none; color: #fff"
+    width="0"
+    height="0"
+    src="https://ci3.googleusercontent.com/meips/ADKq_NaPBoA4KWDGUSxeeIqowGYFmRI9MFO6QDu6ywF7BTb53NBnwtQLckeNG38EzeAls_45nDzBUpmjoTKl7RO7Cxls3eGDSfIyaFfoj2jTK5DSHSGp0hnZNNKeAvzbXbh4Qvavr227S4gK6SHKpYmP_IAHlXmiavXmQ51InXWW2FcY7VNmgvRzbwmXjkpSknTc5Hh4UQvWaoKb1E-g2RYTqTS38-cC3diK2Y7VMQekFmn900HEQtAKefNWfkRDq-TU-7gO2CzDoILkhSJK0-OoiCU4y40T9WOJHhhHrJ9DyAD2Fw-lCs_-4L03MBravYf-pFshfvaWQ-mT4yyki_u7FVhFcGcrPQ2oqo6Q-nIv=s0-d-e1-ft#http://gm.mmstat.com/btob.10?crm_mtn_tracelog_log_id=5000000004146236739&amp;crm_mtn_tracelog_task_id=e14530ce-4329-494b-924f-1b07af05e72f&amp;from=reviewfeedback@notice.alibaba.com&amp;to=daotham30.3@gmail.com&amp;from_sys=null&amp;biz_type=null&amp;template=2000381046"
+    class="CToWUd"
+    data-bit="iit"
+  />
+  <div class="yj6qo"></div>
+  <div class="adL"></div>
+</div>

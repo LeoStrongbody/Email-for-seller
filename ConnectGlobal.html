@@ -1,414 +1,491 @@
 <!DOCTYPE html>
-<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="x-apple-disable-message-reformatting">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="telephone=no" name="format-detection">
+<html
+  dir="ltr"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="telephone=no" name="format-detection" />
     <title>Connect Global - Only $3/month</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+
     <!--[if (mso 16)]>
-    <style type="text/css">
-    a {text-decoration: none;}
-    </style>
+      <style type="text/css">
+        a {
+          text-decoration: none;
+        }
+      </style>
     <![endif]-->
-    
+
     <style type="text/css">
-        /* Reset and base styles */
-        * {
-            box-sizing: border-box;
-        }
-        
-        body {
-            width: 100% !important;
-            height: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            font-family:'Plus Jakarta Sans',sans-serif;
-            line-height: 1.6;
-            color: #333333;
-            background-color: #ffffff;
-        }
-        
-        /* Container styles */
-        .email-wrapper {
-            width: 100%;
-            background-color: #ffffff;
-            padding: 20px 0;
-        }
-        
+      /* Reset and base styles */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 1.6;
+        color: #333333;
+        background-color: #ffffff;
+      }
+
+      /* Container styles */
+      .email-wrapper {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px 0;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header styles */
+      .header {
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #ffffff;
+      }
+
+      .logo {
+        max-width: 139px;
+        height: auto;
+        display: inline-block;
+      }
+
+      /* Banner styles */
+      .banner {
+        position: relative;
+        width: 100%;
+        text-align: center;
+      }
+
+      .banner img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+      }
+
+      /* Content styles */
+      .content-section {
+        padding: 40px 30px;
+      }
+
+      .content-section.bordered {
+        border-bottom: 2px solid #efefef;
+      }
+
+      .content-section.top-border {
+        border-top: 2px solid #efefef;
+      }
+
+      /* Typography */
+      h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin: 0 0 30px 0;
+        text-align: center;
+        line-height: 1.3;
+      }
+
+      h5 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #34495e;
+        margin: 0 0 15px 0;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      h6 {
+        font-size: 16px;
+        font-weight: 400;
+        color: #7f8c8d;
+        margin: 0 0 20px 0;
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555555;
+        margin: 0 0 15px 0;
+      }
+
+      /* List styles */
+      .features-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin: 30px 0;
+      }
+
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .features-list li {
+        padding: 12px 0;
+        font-size: 15px;
+        color: #2c3e50;
+        position: relative;
+        padding-left: 25px;
+        line-height: 1.5;
+      }
+
+      .features-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        color: #27ae60;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      /* Button styles */
+      .btn-container {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .btn {
+        display: inline-block;
+        background: linear-gradient(45deg, #e74c3c, #c0392b);
+        color: #ffffff !important;
+        padding: 15px 35px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        border: none;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        background: linear-gradient(45deg, #c0392b, #a93226);
+      }
+
+      /* Footer styles */
+      .footer {
+        background-color: #ecf0f1;
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .social-links {
+        margin-bottom: 25px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        margin: 0 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .social-links a:hover {
+        transform: scale(1.1);
+      }
+
+      .social-links img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      .footer-text {
+        font-size: 13px;
+        color: #7f8c8d;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .footer-links {
+        font-size: 12px;
+        color: #95a5a6;
+      }
+
+      .footer-links a {
+        color: #95a5a6;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+
+      .footer-links a:hover {
+        color: #7f8c8d;
+        text-decoration: underline;
+      }
+
+      /* Mobile responsiveness */
+      @media only screen and (max-width: 600px) {
         .email-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          margin: 0 10px;
+          border-radius: 0;
         }
-        
-        /* Header styles */
-        .header {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: #ffffff;
-        }
-        
-        .logo {
-            max-width: 139px;
-            height: auto;
-            display: inline-block;
-        }
-        
-        /* Banner styles */
-        .banner {
-            position: relative;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .banner img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-        }
-        
-        /* Content styles */
+
         .content-section {
-            padding: 40px 30px;
+          padding: 25px 20px;
         }
-        
-        .content-section.bordered {
-            border-bottom: 2px solid #efefef;
+
+        .header {
+          padding: 20px 15px;
         }
-        
-        .content-section.top-border {
-            border-top: 2px solid #efefef;
-        }
-        
-        /* Typography */
+
         h2 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #2c3e50;
-            margin: 0 0 30px 0;
-            text-align: center;
-            line-height: 1.3;
+          font-size: 24px;
         }
-        
+
         h5 {
-            font-size: 22px;
-            font-weight: 600;
-            color: #34495e;
-            margin: 0 0 15px 0;
-            text-align: center;
-            line-height: 1.4;
+          font-size: 20px;
         }
-        
+
         h6 {
-            font-size: 16px;
-            font-weight: 400;
-            color: #7f8c8d;
-            margin: 0 0 20px 0;
-            text-align: center;
-            line-height: 1.5;
+          font-size: 14px;
         }
-        
-        p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #555555;
-            margin: 0 0 15px 0;
-        }
-        
-        /* List styles */
+
         .features-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 30px 0;
+          grid-template-columns: 1fr;
+          gap: 20px;
         }
-        
-        .features-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .features-list li {
-            padding: 12px 0;
-            font-size: 15px;
-            color: #2c3e50;
-            position: relative;
-            padding-left: 25px;
-            line-height: 1.5;
-        }
-        
-        .features-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            top: 12px;
-            color: #27ae60;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        
-        /* Button styles */
-        .btn-container {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
+
         .btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            color: #ffffff !important;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-            border: none;
+          padding: 12px 25px;
+          font-size: 14px;
         }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-            background: linear-gradient(45deg, #c0392b, #a93226);
-        }
-        
-        /* Footer styles */
+
         .footer {
-            background-color: #ecf0f1;
-            padding: 40px 30px;
-            text-align: center;
+          padding: 30px 20px;
         }
-        
-        .social-links {
-            margin-bottom: 25px;
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        .email-wrapper {
+          background-color: #ffffff;
         }
-        
-        .social-links a {
-            display: inline-block;
-            margin: 0 8px;
-            transition: transform 0.3s ease;
+
+        .email-container {
+          background-color: #ffffff;
+          color: #333333;
         }
-        
-        .social-links a:hover {
-            transform: scale(1.1);
+
+        .header {
+          background-color: #ffffff;
         }
-        
-        .social-links img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+
+        h2,
+        h5 {
+          color: #2c3e50;
         }
-        
+
+        h6 {
+          color: #7f8c8d;
+        }
+
+        .features-list li {
+          color: #2c3e50;
+        }
+
+        .footer {
+          background-color: #ecf0f1;
+        }
+
         .footer-text {
-            font-size: 13px;
-            color: #7f8c8d;
-            line-height: 1.6;
-            margin-bottom: 15px;
+          color: #7f8c8d;
         }
-        
-        .footer-links {
-            font-size: 12px;
-            color: #95a5a6;
-        }
-        
-        .footer-links a {
-            color: #95a5a6;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-        
-        .footer-links a:hover {
-            color: #7f8c8d;
-            text-decoration: underline;
-        }
-        
-        /* Mobile responsiveness */
-        @media only screen and (max-width: 600px) {
-            .email-container {
-                margin: 0 10px;
-                border-radius: 0;
-            }
-            
-            .content-section {
-                padding: 25px 20px;
-            }
-            
-            .header {
-                padding: 20px 15px;
-            }
-            
-            h2 {
-                font-size: 24px;
-            }
-            
-            h5 {
-                font-size: 20px;
-            }
-            
-            h6 {
-                font-size: 14px;
-            }
-            
-            .features-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .btn {
-                padding: 12px 25px;
-                font-size: 14px;
-            }
-            
-            .footer {
-                padding: 30px 20px;
-            }
-        }
-        
-        /* Dark mode support */
-        @media (prefers-color-scheme: dark) {
-            .email-wrapper {
-                background-color: #ffffff;
-            }
-            
-            .email-container {
-                background-color: #ffffff;
-                color: #333333;
-            }
-            
-            .header {
-                background-color: #ffffff;
-            }
-            
-            h2, h5 {
-                color: #2c3e50;
-            }
-            
-            h6 {
-                color: #7f8c8d;
-            }
-            
-            .features-list li {
-                color: #2c3e50;
-            }
-            
-            .footer {
-                background-color: #ecf0f1;
-            }
-            
-            .footer-text {
-                color: #7f8c8d;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="email-wrapper">
-        <div class="email-container">
-            <!-- Header -->
-            <div class="header">
-                <a href="https://viewstripo.email" target="_blank">
-                    <img src="https://fvngvts.stripocdn.email/content/guids/CABINET_3271e9e67add8137d72bb17a8046e47dbdc374d8dad0132f9d0eec8be0e466e8/images/logomain.png" 
-                         alt="Webinar logo" 
-                         title="Webinar logo" 
-                         class="logo">
-                </a>
-            </div>
-
-            <!-- Banner -->
-            <div class="banner">
-                <img src="https://fvngvts.stripocdn.email/content/guids/bannerImgGuid/images/image17548943253361093.png" 
-                     title="Only $3/month – Connect globally and increase sales now!" 
-                     alt="Only $3/month – Connect globally and increase sales now!">
-            </div>
-
-            <!-- Main Content -->
-            <div class="content-section bordered">
-                <h5>Only $3/month – Connect globally and increase sales now!</h5>
-                <h6>Want to get your products and services in front of customers all over the world?</h6>
-                
-                <div class="btn-container">
-                    <a href="https://viewstripo.email/" target="_blank" class="btn">
-                        Sign up for Connect Global now
-                    </a>
-                </div>
-            </div>
-
-            <!-- Features Section -->
-            <div class="content-section top-border">
-                <h2>With Connect Global, for only $3/month, you will receive:</h2>
-                
-                <div class="features-container">
-                    <ul class="features-list">
-                        <li>4 service promotion posts</li>
-                        <li>4 blogs to tell your brand story</li>
-                    </ul>
-                    <ul class="features-list">
-                        <li>4 featured product/service listings</li>
-                        <li>Global auto-translation feature – helps you reach customers in any language</li>
-                    </ul>
-                </div>
-                
-                <div class="btn-container">
-                    <a href="https://viewstripo.email/" target="_blank" class="btn">
-                        Upgrade Now ➝
-                    </a>
-                </div>
-            </div>
+      <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+          <a href="https://viewstripo.email" target="_blank">
+            <img
+              src="https://fvngvts.stripocdn.email/content/guids/CABINET_3271e9e67add8137d72bb17a8046e47dbdc374d8dad0132f9d0eec8be0e466e8/images/logomain.png"
+              alt="Webinar logo"
+              title="Webinar logo"
+              class="logo"
+            />
+          </a>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="social-links">
-                <a href="" style="display:inline-block;margin:2px" target="_blank">
-                    <img alt="Facebook" height="40" width="40" src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966" style="width:40px;height:40px">
-                </a>
-                <a href="" style="display:inline-block;margin:2px" target="_blank">
-                    <img alt="Pinterest" height="40" width="40" src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971" style="width:40px;height:40px">
-                </a>
-                <a href="" style="display:inline-block;margin:2px" target="_blank">
-                    <img alt="Instagram" height="40" width="40" src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937" style="width:40px;height:40px">
-                </a>
-            </div>
-            
-            <p class="footer-links">
-                <a href="" style="color:black;text-decoration:none;font-weight:bold" target="_blank">Privacy Policy</a> | 
-                <a href="" style="color:black;text-decoration:none;font-weight:bold" target="_blank">Support</a> | 
-                <a href="" style="color:black;text-decoration:none;font-weight:bold" target="_blank">Invite Friends</a> | 
-                <a href="" style="color:black;text-decoration:none;font-weight:bold" target="_blank">Get Inspired</a>
-            </p>
-            
-            <p class="footer-text">
-                This email was sent to you by StrongBody SG PTE, LTD.<br>
-                You are receiving this email because you signed up for StrongBody.ai<br>
-                If you wish to unsubscribe from all future emails, please <a href="https://strongbody.ai/?ref=protecthealth" style="color:black;text-decoration:none" target="_blank">click here</a>.
-            </p>
-            
-            <p class="footer-text" style="font-size: 12px; color: #7a7d85;">
-                105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore<br>
-                StrongBody wellness marketplace, now in Multi Me - your trusted super app for health and connections
-            </p>
-            
-            <div style="text-align: center; padding: 20px 0;">
-                <a href="" style="display:inline-block;margin:5px" target="_blank">
-                    <img src="https://ci3.googleusercontent.com/meips/ADKq_NblRSe_rocoE0cJ87vme7XRwgYrpdykhZiF4f1IknBtljqCNoTfLNUBMzM7FN20-xYGSwaPYnf8jaJ0Z5CEEnkyg8F9jJXAnQHrZD-ZN-xK8WscEHHaUezQ4IHOC0g5H4vMeSqSsrYhLxt9wWlPA5JqbNy_ZBmcRk6Mgy2Hb3RagXOTkIJ4eLgv8QVS_A=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/59105fdb5c5a6842d3a83ab7/original.?1494245339" width="120" alt="App Store">
-                </a>
-                <a href="" style="display:inline-block;margin:5px" target="_blank">
-                    <img src="https://ci3.googleusercontent.com/meips/ADKq_NZdFBHJUk1k1UrHauKrxOZ8B1sXAb7BDo718yRP2PqTN5EMISwnEGM1o7PMupHFqXixFlzhSqb3bti3gOowL0FKpjsyDEouZE_1MG2sIlZHZBBkp3--MA4xxRcffg9RqbI-_uYfMC78OqrA6TESC-YTmjyPKqVJSKK88FM5vYHJl-_140GmmB_2lcd3oA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/59105c225c5a6842d3a83a8e/original.?1494244386" width="120" alt="Google Play">
-                </a>
-            </div>
+        <!-- Banner -->
+        <div class="banner">
+          <img
+            src="https://fvngvts.stripocdn.email/content/guids/bannerImgGuid/images/image17548943253361093.png"
+            title="Only $3/month – Connect globally and increase sales now!"
+            alt="Only $3/month – Connect globally and increase sales now!"
+          />
         </div>
+
+        <!-- Main Content -->
+        <div class="content-section bordered">
+          <h5>Only $3/month – Connect globally and increase sales now!</h5>
+          <h6>
+            Want to get your products and services in front of customers all
+            over the world?
+          </h6>
+
+          <div class="btn-container">
+            <a href="https://viewstripo.email/" target="_blank" class="btn">
+              Sign up for Connect Global now
+            </a>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="content-section top-border">
+          <h2>With Connect Global, for only $3/month, you will receive:</h2>
+
+          <div class="features-container">
+            <ul class="features-list">
+              <li>4 service promotion posts</li>
+              <li>4 blogs to tell your brand story</li>
+            </ul>
+            <ul class="features-list">
+              <li>4 featured product/service listings</li>
+              <li>
+                Global auto-translation feature – helps you reach customers in
+                any language
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn-container">
+            <a href="https://viewstripo.email/" target="_blank" class="btn">
+              Upgrade Now ➝
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="social-links">
+          <a href="" style="display: inline-block; margin: 2px" target="_blank">
+            <img
+              alt="Facebook"
+              height="40"
+              width="40"
+              src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
+              style="width: 40px; height: 40px"
+            />
+          </a>
+          <a href="" style="display: inline-block; margin: 2px" target="_blank">
+            <img
+              alt="Pinterest"
+              height="40"
+              width="40"
+              src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
+              style="width: 40px; height: 40px"
+            />
+          </a>
+          <a href="" style="display: inline-block; margin: 2px" target="_blank">
+            <img
+              alt="Instagram"
+              height="40"
+              width="40"
+              src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
+              style="width: 40px; height: 40px"
+            />
+          </a>
+        </div>
+
+        <p class="footer-links">
+          <a
+            href=""
+            style="color: black; text-decoration: none; font-weight: bold"
+            target="_blank"
+            >Privacy Policy</a
+          >
+          |
+          <a
+            href=""
+            style="color: black; text-decoration: none; font-weight: bold"
+            target="_blank"
+            >Support</a
+          >
+          |
+          <a
+            href=""
+            style="color: black; text-decoration: none; font-weight: bold"
+            target="_blank"
+            >Invite Friends</a
+          >
+          |
+          <a
+            href=""
+            style="color: black; text-decoration: none; font-weight: bold"
+            target="_blank"
+            >Get Inspired</a
+          >
+        </p>
+
+        <p class="footer-text">
+          This email was sent to you by StrongBody SG PTE, LTD.<br />
+          You are receiving this email because you signed up for
+          StrongBody.ai<br />
+          If you wish to unsubscribe from all future emails, please
+          <a
+            href="https://strongbody.ai/?ref=protecthealth"
+            style="color: black; text-decoration: none"
+            target="_blank"
+            >click here</a
+          >.
+        </p>
+
+        <p class="footer-text" style="font-size: 12px; color: #7a7d85">
+          105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore<br />
+          StrongBody wellness marketplace, now in Multi Me - your trusted super
+          app for health and connections
+        </p>
+
+        <div style="text-align: center; padding: 20px 0">
+          <a href="" style="display: inline-block; margin: 5px" target="_blank">
+            <img
+              src="https://ci3.googleusercontent.com/meips/ADKq_NblRSe_rocoE0cJ87vme7XRwgYrpdykhZiF4f1IknBtljqCNoTfLNUBMzM7FN20-xYGSwaPYnf8jaJ0Z5CEEnkyg8F9jJXAnQHrZD-ZN-xK8WscEHHaUezQ4IHOC0g5H4vMeSqSsrYhLxt9wWlPA5JqbNy_ZBmcRk6Mgy2Hb3RagXOTkIJ4eLgv8QVS_A=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/59105fdb5c5a6842d3a83ab7/original.?1494245339"
+              width="120"
+              alt="App Store"
+            />
+          </a>
+          <a href="" style="display: inline-block; margin: 5px" target="_blank">
+            <img
+              src="https://ci3.googleusercontent.com/meips/ADKq_NZdFBHJUk1k1UrHauKrxOZ8B1sXAb7BDo718yRP2PqTN5EMISwnEGM1o7PMupHFqXixFlzhSqb3bti3gOowL0FKpjsyDEouZE_1MG2sIlZHZBBkp3--MA4xxRcffg9RqbI-_uYfMC78OqrA6TESC-YTmjyPKqVJSKK88FM5vYHJl-_140GmmB_2lcd3oA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/59105c225c5a6842d3a83a8e/original.?1494244386"
+              width="120"
+              alt="Google Play"
+            />
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
