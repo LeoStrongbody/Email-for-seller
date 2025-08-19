@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="format-detection" content="telephone=no" />
+      <!-- disable auto telephone linking in iOS -->
+      <title></title>
+      <style type="text/css">
+        /* ========== Custom Font Import ========== */
+        @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+
+        /* RESET STYLES */
+        body,
+        #bodyTable,
+        #bodyCell,
+        #bodyCell {
+          height: 100% !important;
+          margin: 0;
+          padding: 0;
+          width: 100% !important;
+          font-family:'Plus Jakarta Sans',sans-serif;
+        }
+        table {
+          /*border-collapse:collapse;*/
+          border-spacing: 0px;
+        }
+        table[id="bodyTable"] {
+          width: 100% !important;
+          margin: auto;
+          max-width: 600px !important;
+          color: #7a7a7a;
+          font-weight: normal;
+        }
+        img,
+        a img {
+          border: 0;
+          border-style: none;
+          border-color: #ffffff;
+          outline: none;
+          text-decoration: none;
+          height: auto;
+          line-height: 100%;
+        }
+        a {
+          text-decoration: none !important;
+          font-family:'Plus Jakarta Sans',sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: #363c43;
+          font-weight: 500;
+          font-family:'Plus Jakarta Sans',sans-serif;
+          font-size: 20px;
+          line-height: 125%;
+          text-align: Left;
+          letter-spacing: normal;
+          margin-top: 17px;
+          margin-right: 0;
+          margin-bottom: 13px;
+          margin-left: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+        .ReadMsgBody {
+          width: 100%;
+        }
+        .ExternalClass {
+          width: 100%;
+        } /* Force Hotmail/Outlook.com to display emails at full width. */
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        } /* Force Hotmail/Outlook.com to display line heights normally. */
+        table,
+        td {
+          mso-table-lspace: 0pt;
+          mso-table-rspace: 0pt;
+        } /* Remove spacing between tables in Outlook 2007 and up. */
+        #outlook a {
+          padding: 0;
+        } /* Force Outlook 2007 and up to provide a "view in browser" message. */
+        img {
+          -ms-interpolation-mode: bicubic;
+          display: block;
+          outline: none;
+          text-decoration: none;
+        } /* Force IE to smoothly render resized images. */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%; /*font-weight:normal!important;*/
+        } /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+        .ExternalClass td[class="ecxflexibleContainerBox"] h3 {
+          padding-top: 13px !important;
+        } /* Force hotmail to push 2-grid sub headers down */
+
+        /* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
+
+        /* ========== Page Styles ========== */
+        h1 {
+          display: block;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+        }
+        h2 {
+          display: block;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+        }
+        h3 {
+          display: block;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%;
+        }
+        h4 {
+          display: block;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: 500;
+          line-height: 100%;
+        }
+        .flexibleImage {
+          height: auto;
+        }
+        .linkRemoveBorder {
+          border-bottom: 0 !important;
+        }
+        table[class="flexibleContainerCellDivider"] {
+          padding-bottom: 0 !important;
+          padding-top: 0 !important;
+        }
+
+        body,
+        #bodyTable {
+          background-color: #f0f1f3;
+        }
+        #emailHeader {
+          background-color: #f0f1f3;
+        }
+        #emailBody {
+          background-color: #ffffff; /*border-collapse:collapse;*/
+          border-spacing: 0px;
+          border: 1px solid #e0e1e2;
+          box-shadow: 0 0 15px #e8eaec;
+          -moz-box-shadow: 0 0 15px #e8eaec;
+          -webkit-box-shadow: 0 0 15px #e8eaec;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+        }
+        #emailFooter {
+          background-color: #f0f1f3;
+        }
+        .textContent,
+        .textContentLast {
+          color: #6b7075;
+          font-family:'Plus Jakarta Sans',sans-serif;
+          font-size: 16px;
+          line-height: 125%;
+          text-align: left;
+        }
+        .textContent a,
+        .textContentLast a {
+          color: #205478;
+          text-decoration: underline;
+        }
+        .nestedContainer {
+          background-color: #f6f7f8;
+          border: 1px solid #f3f3f5;
+        }
+        .emailButton {
+          background-color: #205478;
+          border-collapse: separate;
+        }
+        .buttonContent {
+          color: #ffffff;
+          font-family:'Plus Jakarta Sans',sans-serif;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 100%;
+          padding: 15px;
+          text-align: center;
+        }
+        .buttonContent a {
+          color: #ffffff;
+          display: block;
+          text-decoration: none !important;
+          border: 0 !important;
+        }
+        .emailCalendar {
+          background-color: #ffffff;
+          border: 1px solid #cccccc;
+        }
+        .emailCalendarMonth {
+          background-color: #205478;
+          color: #ffffff;
+          font-family:'Plus Jakarta Sans',sans-serif, Arial, sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          text-align: center;
+        }
+        .emailCalendarDay {
+          color: #205478;
+          font-family:'Plus Jakarta Sans',sans-serif, Arial, sans-serif;
+          font-size: 60px;
+          font-weight: bold;
+          line-height: 100%;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          text-align: center;
+        }
+        .imageContentText {
+          margin-top: 10px;
+          line-height: 0;
+        }
+        .imageContentText a {
+          line-height: 0;
+        }
+        #invisibleIntroduction {
+          display: none !important;
+          font-size: 1px;
+        } /* Removing the introduction text from the view */
+
+        .ios-footer {
+          color: #8d9196;
+          text-decoration: none !important;
+        }
+        .ios-footer a {
+          color: #8d9196;
+          text-decoration: none !important;
+        }
+
+        /*FRAMEWORK HACKS & OVERRIDES */
+        span[class="ios-color-hack"] a {
+          color: #275100 !important;
+          text-decoration: none !important;
+        } /* Remove all link colors in IOS (below are duplicates based on the color preference) */
+        span[class="ios-color-hack2"] a {
+          color: #205478 !important;
+          text-decoration: none !important;
+        }
+        span[class="ios-color-hack3"] a {
+          color: #6b7075 !important;
+          text-decoration: none !important;
+        }
+
+        .a[href^="tel"],
+        a[href^="sms"] {
+          text-decoration: none !important;
+          color: #606060 !important;
+          pointer-events: none !important;
+          cursor: default !important;
+        }
+        .mobile_link a[href^="tel"],
+        .mobile_link a[href^="sms"] {
+          text-decoration: none !important;
+          color: #606060 !important;
+          pointer-events: auto !important;
+          cursor: default !important;
+        }
+
+        /* MOBILE STYLES */
+        @media only screen and (max-width: 615px) {
+          /*////// CLIENT-SPECIFIC STYLES //////*/
+          body {
+            width: 100% !important;
+            min-width: 100% !important;
+          } /* Force iOS Mail to render the email at full width. */
+
+          table[id="emailHeader"],
+          table[id="emailBody"],
+          table[id="emailFooter"] {
+            width: 95% !important;
+          }
+
+          table[class="flexibleContainer"] {
+            width: 100% !important;
+          }
+
+          td[class="flexibleContainerBox"],
+          td[class="flexibleContainerBox"] table {
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+
+          td[class="imageContent"] img {
+            height: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          img[class="flexibleImage"] {
+            height: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          img[class="flexibleImageSmall"] {
+            height: auto !important;
+            width: auto !important;
+          }
+
+          table[class="flexibleContainerBoxNext"] {
+            padding-top: 30px !important;
+          }
+
+          table[class="emailButton"] {
+            width: 100% !important;
+          }
+          td[class="buttonContent"] {
+            padding: 0 !important;
+          }
+          td[class="buttonContent"] a {
+            padding: 15px !important;
+          }
+
+          /* FULL-WIDTH TABLES */
+          table[class="responsive-table"] {
+            width: 100% !important;
+          }
+
+          /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+          td[class="padding"] {
+            padding: 10px 0px 10px 0px !important;
+            text-align: center;
+          }
+
+          /* ADJUST BUTTONS ON MOBILE */
+          td[class="mobile-wrapper"] {
+            padding: 10px 5% 15px 5% !important;
+          }
+
+          table[class="mobile-button-container"] {
+            margin: 0 auto;
+            width: 100% !important;
+          }
+
+          a[class="mobile-button"] {
+            width: 80% !important;
+            padding: 15px !important;
+            border: 0 !important;
+            font-size: 16px !important;
+          }
+        }
+
+        @media only screen and (-webkit-device-pixel-ratio: 0.75) {
+          /* Put CSS for low density (ldpi) Android layouts in here */
+        }
+
+        @media only screen and (-webkit-device-pixel-ratio: 1) {
+          /* Put CSS for medium density (mdpi) Android layouts in here */
+        }
+
+        @media only screen and (-webkit-device-pixel-ratio: 1.5) {
+          /* Put CSS for high density (hdpi) Android layouts in here */
+        }
+        /* end Android targeting */
+
+        /* CONDITIONS FOR IOS DEVICES ONLY
+            =====================================================*/
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+        }
+        /* end IOS targeting */
+      </style>
+      <center style="background-color: #f0f1f3">
+        <table
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          height="100%"
+          width="100%"
+          id="bodyTable"
+          style="
+            table-layout: fixed;
+            max-width: 100% !important;
+            width: 100% !important;
+            min-width: 100% !important;
+          "
+        >
+          <tbody>
+            <tr>
+              <td align="center" valign="top" id="bodyCell">
+                <!-- // EMAIL HEADER -->
+                <!-- PREHEADER TEXT -->
+                <table
+                  bgcolor="#F0F1F3"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="600"
+                  id="emailHeader"
+                >
+                  <!-- HEADER ROW // -->
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top">
+                        <!-- CENTERING TABLE // -->
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                        >
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  width="600"
+                                  class="flexibleContainer"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        valign="top"
+                                        width="600"
+                                        class="flexibleContainerCell"
+                                      >
+                                        <!-- CONTENT TABLE // -->
+                                        <table
+                                          align="center"
+                                          border="0"
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          width="100%"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                align="center"
+                                                valign="middle"
+                                                id="invisibleIntroduction"
+                                                class="flexibleContainerBox"
+                                                style="display: none !important"
+                                              >
+                                                <table
+                                                  border="0"
+                                                  cellpadding="0"
+                                                  cellspacing="0"
+                                                  width="100%"
+                                                  style="max-width: 100%"
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        align="center"
+                                                        class="textContent"
+                                                      >
+                                                        <div
+                                                          style="
+                                                            font-family:'Plus Jakarta Sans',sans-serif;
+                                                            font-size: 1px;
+                                                            color: #f0f1f3;
+                                                            text-align: center;
+                                                            line-height: 120%;
+                                                            display: block;
+                                                          "
+                                                        ></div>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- // CENTERING TABLE -->
+                      </td>
+                    </tr>
+                    <!-- // END -->
+                  </tbody>
+                </table>
+                <!-- // END -->
+                <!-- EMAIL HEADER W LOGO // -->
+                <table
+                  bgcolor="#F0F1F3"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="600"
+                  id="emailHeader"
+                >
+                  <!-- HEADER ROW // -->
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top">
+                        <!-- CENTERING TABLE // -->
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                        >
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  width="600"
+                                  class="flexibleContainer"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        valign="top"
+                                        width="600"
+                                        class="flexibleContainerCell"
+                                      >
+                                        <!-- CONTENT TABLE // -->
+                                        <table
+                                          align="center"
+                                          border="0"
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          width="100%"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                align="center"
+                                                valign="middle"
+                                                style="
+                                                  display: block;
+                                                  text-align: center;
+                                                "
+                                              >
+                                                <table
+                                                  border="0"
+                                                  cellpadding="0"
+                                                  cellspacing="0"
+                                                  width="100%"
+                                                  style="max-width: 100%"
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        align="center"
+                                                        class=""
+                                                      >
+                                                        <a
+                                                          href=""
+                                                          target="_blank"
+                                                        >
+                                                          <img
+                                                            alt="Strongbody Logo"
+                                                            src="./icon email/logoMain.png"
+                                                            width="150"
+                                                            style="
+                                                              font-family:'Plus Jakarta Sans',sans-serif;
+                                                              color: #666666;
+                                                              font-size: 16px;
+                                                              display: inline-block !important;
+                                                            "
+                                                            border="0"
+                                                          />
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- // CENTERING TABLE -->
+                      </td>
+                    </tr>
+                    <!-- // END -->
+                  </tbody>
+                </table>
+                <!-- // END -->
+                <!-- START WHITE CONTAINER SECTION -->
+                <!-- NOTE: REMOVE margin-bottom: 20px; FROM STYLES IF THERE's ONLY ONE CONTAINER
+            -->
+                <table
+                  bgcolor="#FFFFFF"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="600"
+                  id="emailBody"
+                  style="
+                    margin-bottom: 5px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                  "
+                >
+                  <!-- MODULE ROW // -->
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top">
+                        <!-- CENTERING TABLE // -->
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          style="
+                            color: #ffffff;
+                            border-radius: 4px 4px 0 0;
+                            -moz-border-radius: 4px 4px 0 0;
+                            -webkit-border-radius: 4px 4px 0 0;
+                          "
+                          bgcolor="#3F8ECC"
+                        >
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  width="600"
+                                  class="flexibleContainer"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        valign="top"
+                                        width="600"
+                                        class="flexibleContainerCell"
+                                      >
+                                        <!-- CONTENT TABLE // -->
+                                        <table
+                                          border="0"
+                                          cellpadding="30"
+                                          cellspacing="0"
+                                          width="100%"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                align="center"
+                                                valign="top"
+                                                class="textContent"
+                                              >
+                                                <h1
+                                                  style="
+                                                    color: #f8f7fb;
+                                                    line-height: 125%;
+                                                    font-family:'Plus Jakarta Sans',sans-serif;
+                                                    font-size: 30px;
+                                                    font-weight: 500;
+                                                    text-align: center;
+                                                    margin-bottom: 15px;
+                                                    margin-top: 20px;
+                                                    padding-right: 30px;
+                                                    padding-left: 30px;
+                                                  "
+                                                >
+                                                  Blurry Images Can Reduce Views
+                                                  Fix It Now!
+                                                </h1>
+
+                                                <div
+                                                  style="
+                                                    text-align: center;
+                                                    font-family:'Plus Jakarta Sans',sans-serif;
+                                                    font-size: 20px;
+                                                    margin-bottom: 0;
+                                                    color: #eae7f2;
+                                                    line-height: 135%;
+                                                    padding-left: 20px;
+                                                    padding-right: 20px;
+                                                  "
+                                                >
+                                                  We’ve noticed that some of
+                                                  your service/product images
+                                                  are not clear.
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <!-- // CONTENT TABLE -->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- // CENTERING TABLE -->
+                      </td>
+                    </tr>
+                    <!-- // MODULE ROW -->
+                    <!-- MODULE ROW // -->
+                    <tr>
+                      <td align="center" valign="top">
+                        <!-- CENTERING TABLE // -->
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                        >
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  width="600"
+                                  class="flexibleContainer"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        valign="top"
+                                        width="600"
+                                        class="flexibleContainerCell"
+                                      >
+                                        <!-- CONTENT TABLE // -->
+                                        <table
+                                          border="0"
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          width="100%"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                valign="top"
+                                                class="imageContent"
+                                              >
+                                                <a
+                                                  href=""
+                                                  target="_blank"
+                                                  style="color: #6b7075"
+                                                >
+                                                  <img
+                                                    src="https://daks2k3a4ib2z.cloudfront.net/52b1d97cd25933e36e000134/57bb3a62846cc19e60aee2fd_email%20header%20v2.png"
+                                                    class="flexibleImage"
+                                                    style="
+                                                      max-width: 600px;
+                                                      width: 100%;
+                                                      display: block;
+                                                    "
+                                                    alt="Go Strongbody now"
+                                                    title="Go Strongbody now"
+                                                    border="0"
+                                                  />
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <!-- // CONTENT TABLE -->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- // CENTERING TABLE -->
+                      </td>
+                    </tr>
+                    <!-- // MODULE ROW -->
+                    <!-- MODULE ROW // -->
+                    <tr>
+                      <td align="center" valign="top">
+                        <!-- CENTERING TABLE // -->
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                        >
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  width="600"
+                                  class="flexibleContainer"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        valign="top"
+                                        width="600"
+                                        class="flexibleContainerCell"
+                                      >
+                                        <table
+                                          border="0"
+                                          cellpadding="30"
+                                          cellspacing="0"
+                                          width="100%"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                align="center"
+                                                valign="top"
+                                                style="
+                                                  padding-top: 40px;
+                                                  padding-bottom: 5px;
+                                                "
+                                              >
+                                                <!-- CONTENT TABLE // -->
+                                                <table
+                                                  border="0"
+                                                  cellpadding="0"
+                                                  cellspacing="0"
+                                                  width="100%"
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        valign="top"
+                                                        class="textContent"
+                                                      >
+                                                        <h3
+                                                          style="
+                                                            color: #363c43;
+                                                            line-height: 125%;
+                                                            font-family:'Plus Jakarta Sans',sans-serif;
+                                                            font-size: 20px;
+                                                            font-weight: 500;
+                                                            margin-top: 0;
+                                                            margin-bottom: 15px;
+                                                            text-align: center;
+                                                          "
+                                                        >
+                                                          Low-quality images can
+                                                          affect:
+                                                        </h3>
+
+                                                        <div
+                                                          style="
+                                                            text-align: center;
+                                                            font-family:'Plus Jakarta Sans',sans-serif;
+                                                            font-size: 16px;
+                                                            margin-bottom: 0;
+                                                            margin-top: 3px;
+                                                            color: #6b7075;
+                                                            line-height: 135%;
+                                                          "
+                                                        >
+                                                          The experience of
+                                                          buyers searching for
+                                                          services. <br />
+                                                          Trust and conversion
+                                                          rates. <br />
+                                                          The visibility of your
+                                                          services in search
+                                                          results.
+                                                        </div>
+                                                        <div
+                                                          style="
+                                                            text-align: center;
+                                                            font-family:'Plus Jakarta Sans',sans-serif;
+                                                            font-size: 16px;
+                                                            margin-bottom: 0;
+                                                            margin-top: 3px;
+                                                            color: #6b7075;
+                                                            line-height: 135%;
+                                                          "
+                                                        ></div>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="top">
+                        <br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="top">
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                        >
+                          <tbody>
+                            <tr style="padding-top: 0">
+                              <td align="center" valign="top">
+                                <table
+                                  border="0"
+                                  cellpadding="30"
+                                  cellspacing="0"
+                                  width="600"
+                                  class="flexibleContainer"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        style="padding-top: 0"
+                                        align="center"
+                                        valign="top"
+                                        width="600"
+                                        class="flexibleContainerCell"
+                                      >
+                                        <table
+                                          width="100%"
+                                          border="0"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          class="mobile-button-container"
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                align="center"
+                                                style="
+                                                  padding-bottom: 0;
+                                                  padding-top: 0;
+                                                "
+                                                class="padding"
+                                              >
+                                                <table
+                                                  border="0"
+                                                  cellspacing="0"
+                                                  cellpadding="0"
+                                                  class="responsive-table"
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="center">
+                                                        <a
+                                                          href=""
+                                                          target="_blank"
+                                                          style="
+                                                            font-size: 16px;
+                                                            font-family:'Plus Jakarta Sans',sans-serif;
+                                                            font-weight: normal;
+                                                            color: #ffffff;
+                                                            text-decoration: none;
+                                                            background-color: #db1f26;
+                                                            border-top: 15px
+                                                              solid #db1f26;
+                                                            border-bottom: 15px
+                                                              solid #db1f26;
+                                                            border-left: 25px
+                                                              solid #db1f26;
+                                                            border-right: 25px
+                                                              solid #db1f26;
+                                                            border-radius: 3px;
+                                                            -webkit-border-radius: 3px;
+                                                            -moz-border-radius: 3px;
+                                                            display: inline-block;
+                                                          "
+                                                          class="mobile-button"
+                                                          >Update now →</a
+                                                        >
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <!-- // BULLETPROOF BUTTON -->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- // CENTERING TABLE -->
+                      </td>
+                    </tr>
+                    <!-- // MODULE ROW W/ BUTTON -->
+                    <!-- MODULE ROW // -->
+
+                    <!-- // MODULE ROW -->
+                  </tbody>
+                </table>
+                <!-- END WHITE CONTAINER SECTION -->
+                <!-- EMAIL FOOTER // -->
+                <!-- The table "emailBody" is the email's container. Its width can be set to 100%
+            for a color band that spans the width of the page. -->
+                <table
+                  bgcolor="#F0F1F3"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="600"
+                  id="emailFooter"
+                >
+                  <!-- FOOTER ROW // -->
+                  <!-- To move or duplicate any of the design patterns in this email, simply move
+              or copy the entire MODULE ROW section for each content block. -->
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        <table
+                          width="100%"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          role="presentation"
+                        >
+                          <tbody>
+                            <tr>
+                              <td class="r19-c" style="display: inline-block">
+                                <table
+                                  style="
+                                    width: 100%;
+                                    text-align: center;
+                                    border-collapse: separate;
+                                  "
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        style="padding: 10px 10px 20px"
+                                      >
+                                        <a
+                                          href=""
+                                          style="
+                                            display: inline-block;
+                                            margin: 2px;
+                                          "
+                                          target="_blank"
+                                        >
+                                          <img
+                                            alt="Facebook"
+                                            height="40"
+                                            width="40"
+                                            src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
+                                            style="width: 40px; height: 40px"
+                                            class="CToWUd"
+                                            data-bit="iit"
+                                        /></a>
+                                        <a
+                                          href=""
+                                          style="
+                                            display: inline-block;
+                                            margin: 2px;
+                                          "
+                                          target="_blank"
+                                        >
+                                          <img
+                                            alt="Pinterest"
+                                            height="40"
+                                            width="40"
+                                            src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
+                                            style="width: 40px; height: 40px"
+                                            class="CToWUd"
+                                            data-bit="iit"
+                                        /></a>
+                                        <a
+                                          href=""
+                                          style="
+                                            display: inline-block;
+                                            margin: 2px;
+                                          "
+                                          target="_blank"
+                                        >
+                                          <img
+                                            alt="Instagram"
+                                            height="40"
+                                            width="40"
+                                            src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
+                                            style="width: 40px; height: 40px"
+                                            class="CToWUd"
+                                            data-bit="iit"
+                                        /></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        style="
+                                          color: #c5c6c9;
+                                          font-size: 12px;
+                                          line-height: 18px;
+                                          font-family: 'Plus Jakarta Sans',
+                                            sans-serif;
+                                          padding: 0px 5px;
+                                        "
+                                        align="center"
+                                      >
+                                        <span style="font-size: 12px"
+                                          ><span
+                                            style="
+                                              font-family: 'Plus Jakarta Sans',
+                                                sans-serif;
+                                            "
+                                            ><a
+                                              href=""
+                                              style="
+                                                color: black;
+                                                text-decoration: none;
+                                                font-weight: bold;
+                                              "
+                                              target="_blank"
+                                              >Privacy Policy</a
+                                            >
+                                            |
+                                            <a
+                                              href=""
+                                              style="
+                                                color: black;
+                                                text-decoration: none;
+                                                font-weight: bold;
+                                              "
+                                              target="_blank"
+                                              >Support</a
+                                            >
+                                            |
+                                            <a
+                                              href=""
+                                              style="
+                                                color: black;
+                                                text-decoration: none;
+                                                font-weight: bold;
+                                              "
+                                              target="_blank"
+                                            >
+                                              Invite Friends</a
+                                            >
+                                            |
+                                            <a
+                                              href=""
+                                              style="
+                                                color: black;
+                                                text-decoration: none;
+                                                font-weight: bold;
+                                              "
+                                              target="_blank"
+                                              >Get Inspired</a
+                                            ><br /><br />
+                                            <span style="color: #7a7d85">
+                                              This email was sent to you by
+                                              StrongBody SG PTE, LTD.<br />
+                                              You are receiving this email
+                                              because you signed up for
+                                              StrongBody.ai<br />
+                                              if you wish to unsubscribe from
+                                              all future emails, please click
+                                              <a
+                                                href="https://strongbody.ai/?ref=protecthealth"
+                                                style="
+                                                  color: black;
+                                                  text-decoration: none;
+                                                "
+                                                target="_blank"
+                                                >here</a
+                                              >.<br />
+                                              <br />
+                                              105 CECIL STREET #18-20 THE
+                                              OCTAGON Singapore, 069534
+                                              Singapore <br />StrongBody
+                                              wellness marketplace, now in Multi
+                                              Me - your trusted super app for
+                                              health and connections</span
+                                            ></span
+                                          ></span
+                                        >
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        style="padding: 20px 10px"
+                                      >
+                                        <a
+                                          href=""
+                                          style="
+                                            display: inline-block;
+                                            margin: 5px;
+                                          "
+                                          target="_blank"
+                                          ><img
+                                            src="https://ci3.googleusercontent.com/meips/ADKq_NblRSe_rocoE0cJ87vme7XRwgYrpdykhZiF4f1IknBtljqCNoTfLNUBMzM7FN20-xYGSwaPYnf8jaJ0Z5CEEnkyg8F9jJXAnQHrZD-ZN-xK8WscEHHaUezQ4IHOC0g5H4vMeSqSsrYhLxt9wWlPA5JqbNy_ZBmcRk6Mgy2Hb3RagXOTkIJ4eLgv8QVS_A=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/59105fdb5c5a6842d3a83ab7/original.?1494245339"
+                                            width="120"
+                                            class="CToWUd"
+                                            data-bit="iit"
+                                        /></a>
+                                        <a
+                                          href=""
+                                          style="
+                                            display: inline-block;
+                                            margin: 5px;
+                                          "
+                                          target="_blank"
+                                        >
+                                          <img
+                                            src="https://ci3.googleusercontent.com/meips/ADKq_NZdFBHJUk1k1UrHauKrxOZ8B1sXAb7BDo718yRP2PqTN5EMISwnEGM1o7PMupHFqXixFlzhSqb3bti3gOowL0FKpjsyDEouZE_1MG2sIlZHZBBkp3--MA4xxRcffg9RqbI-_uYfMC78OqrA6TESC-YTmjyPKqVJSKK88FM5vYHJl-_140GmmB_2lcd3oA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/59105c225c5a6842d3a83a8e/original.?1494244386"
+                                            width="120"
+                                            class="CToWUd"
+                                            data-bit="iit"
+                                        /></a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <br />
+
+                                <div
+                                  id="m_1369485827411735568m_-8131000749247555189_eoa_div"
+                                  style="
+                                    display: none;
+                                    background-image: url('https://ci3.googleusercontent.com/meips/ADKq_NY40Sll3qdy42cIPJgSb6Z62ag5zkmEulWvTRdtJ75VanCt3mRJDa4-WXOh4IPAkMgdQ89QsOTynEbU_6AIosIyzw_pz73e_E8MYkVSUHVta-HdIvw_KUd3f2ro4ZGHbuX-f6bB=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/bf1f2dd5-e5c0-451c-915b-71fa9b5a4992/P');
+                                  "
+                                ></div>
+                                <img
+                                  id="m_1369485827411735568m_-8131000749247555189_eoa_img"
+                                  src="https://ci3.googleusercontent.com/meips/ADKq_NY_WL37QVdawLGQzCUqaY1V-at-S-UKl3rYgIRR9pHoPwQSq-6MtmYWzArR0Wu7VDCzBQl_IC9Y5DiG77wvhnbbsVVXUTvAir9YqZwpDGdP4XpybZeENHsHIy0rZfTbHPIv2A=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/bf1f2dd5-e5c0-451c-915b-71fa9b5a4992"
+                                  style="
+                                    height: 1px !important;
+                                    width: 1px !important;
+                                    display: block;
+                                    margin: 0;
+                                    padding: 0;
+                                    border-width: 0;
+                                  "
+                                  alt=""
+                                  title=""
+                                  border="0"
+                                  width="1"
+                                  height="1"
+                                  class="CToWUd"
+                                  data-bit="iit"
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- // END -->
+
+                <!-- // END -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <div itemscope="" itemtype="http://schema.org/EmailMessage">
+        <div
+          itemprop="publisher"
+          itemscope=""
+          itemtype="http://schema.org/Organization"
+        >
+          <meta itemprop="name" content="Webflow" />
+          <link itemprop="url" href="https://webflow.com/" />
+          <link
+            itemprop="url/googlePlus"
+            href="https://plus.google.com/b/118282361738086985368"
+          />
+        </div>
+        <div itemprop="about" itemscope="" itemtype="http://schema.org/Offer">
+          <link
+            itemprop="image"
+            href="https://d3e54v103j8qbb.cloudfront.net/gen/img/marketing/webflow-logo.svg"
+          />
+        </div>
+      </div>
+    </html>
+  </body>
+</html>
