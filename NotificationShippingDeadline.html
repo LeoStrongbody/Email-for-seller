@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StrongBody  - Shipping Reminder</title>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <script src="footer.js"></script>
+    <title>StrongBody - Shipping Reminder</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/Footer.js"></script>
     <style>
       /* Base Styles & Reset */
       * {
@@ -15,7 +18,7 @@
       }
 
       body {
-        font-family:'Plus Jakarta Sans',sans-serif;
+        font-family: "Plus Jakarta Sans", sans-serif;
         background-color: #f5f7fa; /* Light grey background for a clean look */
         color: #333333;
         line-height: 1.6;
@@ -83,7 +86,7 @@
 
       /* Alert Banner */
       .alert-banner {
-        background-color: #FDFDFF; /* Softer yellow */
+        background-color: #fdfdff; /* Softer yellow */
         border: 1px solid #e0e6ed; /* Matching border */
         border-radius: 8px;
         padding: 18px 20px;
@@ -95,7 +98,7 @@
 
       .alert-icon {
         font-size: 24px;
-        color: #202D43; /* Darker yellow/orange for icon */
+        color: #202d43; /* Darker yellow/orange for icon */
         line-height: 1;
       }
 
@@ -106,13 +109,13 @@
       .alert-title {
         font-size: 17px;
         font-weight: 700;
-        color: #202D43;
+        color: #202d43;
         margin-bottom: 5px;
       }
 
       .alert-subtitle {
         font-size: 14px;
-        color: #202D43;
+        color: #202d43;
         font-weight: 500;
       }
 
@@ -508,7 +511,7 @@
               <!-- <span class="days-left">3 days left</span> -->
             </div>
             <div class="alert-subtitle">
-               Order No. {{order id}} {{product name}} - Action required
+              Order No. {{order id}} {{product name}} - Action required
             </div>
           </div>
         </div>
@@ -517,9 +520,11 @@
 
         <div class="message-content">
           <p>
-            The Order No. <strong>{{order id}}</strong> <strong>{{product name}}</strong> to
-            buyer <strong>{{buyer name}}</strong>. Please send your products to shipping unit and
-            provide proof of shipment by updating the order status.
+            The Order No. <strong>{{order id}}</strong>
+            <strong>{{product name}}</strong> to buyer
+            <strong>{{buyer name}}</strong>. Please send your products to
+            shipping unit and provide proof of shipment by updating the order
+            status.
           </p>
 
           <!-- <p>
@@ -529,7 +534,8 @@
 
           <div class="consequences-list">
             <h4>
-              Important: Delays in orders reaching buyers can have consequences.:
+              Important: Delays in orders reaching buyers can have
+              consequences.:
             </h4>
             <ol>
               <li>
@@ -537,7 +543,10 @@
                 based on online transaction fulfillment scores.
               </li>
               <li>
-                <strong> Late or overdue delivery will result in order cancellation.</strong>
+                <strong>
+                  Late or overdue delivery will result in order
+                  cancellation.</strong
+                >
               </li>
             </ol>
           </div>
@@ -590,7 +599,9 @@
         </div>
       </div>
 
-       <script>document.write(emailFooter);</script>
+      <script>
+        document.write(emailFooter);
+      </script>
     </div>
   </body>
 </html>
